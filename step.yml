@@ -86,3 +86,17 @@ inputs:
       is_expand: true
       is_required: true
       is_sensitive: true
+  - user_pass: "$VPN_USER_PASS"
+    opts:
+      title: ""
+      summary: ""
+      is_expand: true
+      is_required: true
+      is_sensitive: true
+  - tls_auth: "$VPN_TLS_AUTH"
+    opts:
+      title: ""
+      summary: ""
+      is_expand: true
+      is_required: true
+      is_sensitive: true
