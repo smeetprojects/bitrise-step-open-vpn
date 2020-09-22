@@ -15,10 +15,16 @@ dev tun
 proto ${proto}
 remote ${host} ${port}
 resolv-retry infinite
+sndbuf 0
+rcvbuf 0
 nobind
 persist-key
 persist-tun
-comp-lzo
+remote-cert-tls server
+auth SHA512
+cipher AES-256-CBC
+;setenv opt block-outside-dns
+key-direction 1
 verb 3
 ca ca.crt
 cert client.crt
