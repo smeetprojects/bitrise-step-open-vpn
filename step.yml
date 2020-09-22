@@ -100,3 +100,10 @@ inputs:
       is_expand: true
       is_required: true
       is_sensitive: true
+  - openvpn_options: 
+    opts:
+      title: "Client Options"
+      summary: "Client Options"
+      is_expand: true
+      is_required: false
+      is_sensitive: false
