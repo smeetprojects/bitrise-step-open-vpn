@@ -62,7 +62,7 @@ verb 3
 auth SHA512
 remote-cert-tls server
 pull-filter ignore "redirect-gateway"
-tls-auth tls-auth.key
+tls-auth tls-auth.key 1
 ${openvpn_options}
 EOF
 
