@@ -44,7 +44,7 @@ EOF
     echo ${client_key} | base64 -D -o client.key > /dev/null 2>&1
     echo ${tls_auth} | base64 -D -o tls-auth.key > /dev/null 2>&1
 
-    sudo openvpn --client --dev tun --proto ${proto} --remote ${host} ${port} --resolv-retry infinite --nobind --persist-key --persist-tun --ca ca.crt --cert client.crt --key client.key --ns-cert-type server --comp-lzo --verb 3 --auth SHA512 --remote-cert-tls server --tls-auth tls-auth.key 1 > /dev/null 2>&1 &
+    sudo openvpn --client --dev tun --proto ${proto} --remote ${host} ${port} --resolv-retry infinite --nobind --persist-key --persist-tun --ca ca.crt --cert client.crt --key client.key --ns-cert-type server --comp-lzo --verb 3 --auth SHA512 --remote-cert-tls server --pull-filter ignore "redirect-gateway" --tls-auth tls-auth.key 1 > /dev/null 2>&1 &
 
     sleep 5
 
