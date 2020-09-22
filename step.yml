@@ -91,7 +91,7 @@ inputs:
       title: "Base64 encoded User Password"
       summary: "Base64 encoded User Password"
       is_expand: true
-      is_required: true
+      is_required: false
       is_sensitive: true
   - tls_auth: "$VPN_TLS_AUTH"
     opts:
