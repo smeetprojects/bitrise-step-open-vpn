@@ -62,7 +62,7 @@ persist-tun
 ca ca.crt
 cert client.crt
 key client.key
-comp-lzo
+;comp-lzo
 verb 3
 auth SHA512
 remote-cert-tls server
