@@ -66,7 +66,7 @@ comp-lzo
 verb 3
 auth SHA512
 remote-cert-tls server
-pull-filter ignore "redirect-gateway"
+#pull-filter ignore "redirect-gateway"
 tls-auth tls-auth.key 1
 ${openvpn_options}
 EOF
@@ -76,7 +76,7 @@ EOF
 
     sleep 5
 
-    if ifconfig -l | grep utun0 > /dev/null
+    if ifconfig -l | grep utun1 > /dev/null
     then
       echo "VPN connection succeeded"
     else
